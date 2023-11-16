@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 3</title>
+</head>
+<body>
+
+<form id="ageCalculatorForm">
+  <label for="birthYear">Enter birth year:</label>
+  <input type="text" id="birthYear" placeholder="YYYY" />
+  <button type="button" onclick="calculateAge()">Calculate Age</button>
+</form>
+
+<script>
+function calculateAge() {
+  var birthYearInput = document.getElementById("birthYear");
+  var birthYear = parseInt(birthYearInput.value);
+
+  if (!isNaN(birthYear)) {
+    var currentYear = new Date().getFullYear();
+    var age = currentYear - birthYear;
+
+    alert("The calculated age is: " + age);
+  } else {
+    alert("Please enter a valid birth year.");
+  }
+}
+</script>
+
+</body>
+</html>
